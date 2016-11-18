@@ -11,12 +11,12 @@ class Game
     @fut_board = @curr_board
   end
 
-  def fill_fut_board
-
+  def sum_of_neighbors_alive(cell)
+    cell
   end
 
-  def sum_of_neighbors_alive
-    @curr_board[]
+  def fill_fut_board
+    @curr_board.each { |cell| sum_of_neighbors_alive(cell) }
   end
 end
 
@@ -31,3 +31,6 @@ class Cell
     @alive = 0
   end
 end
+
+binding.pry
+''
