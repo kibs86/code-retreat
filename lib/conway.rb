@@ -1,13 +1,14 @@
 # create game class
 class Game
-  attr_accessor :board
+  attr_accessor :curr_board, :fut_board
 
   def initialize(row, col)
-    @board = Array.new(row).fill do |y|
+    @curr_board = Array.new(row).fill do |y|
       Array.new(col).fill do |x|
         Cell.new(x, y)
       end
     end
+    @fut_board = @curr_board
   end
 end
 
@@ -20,5 +21,9 @@ class Cell
     @x = x
     @y = y
     @alive = 0
+  end
+
+  def neighbor_sum
+    Game.board
   end
 end
