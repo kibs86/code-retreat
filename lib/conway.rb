@@ -10,6 +10,14 @@ class Game
     end
     @fut_board = @curr_board
   end
+
+  def fill_fut_board
+
+  end
+
+  def sum_of_neighbors_alive
+    @curr_board[]
+  end
 end
 
 # create cell class
@@ -21,9 +29,5 @@ class Cell
     @x = x
     @y = y
     @alive = 0
-  end
-
-  def neighbor_sum
-    Game.board
   end
 end
